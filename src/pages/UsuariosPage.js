@@ -13,7 +13,7 @@ const UsuariosPage = () => {
 
   const [estudianteEditar, setEstudianteEditar] = useState(null);  // Estado para el estudiante que se está editando
 
-  const API_URL = 'http://localhost:8002/api/estudiantes';
+  const API_URL = process.env.REACT_APP_API_URL2 + '/estudiantes';
 
   const listarEstudiantes = async () => {
     try {

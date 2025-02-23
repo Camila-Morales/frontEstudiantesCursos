@@ -8,8 +8,9 @@ const MatriculasPage = () => {
   const [cursoId, setCursoId] = useState('');
   const [mensaje, setMensaje] = useState('');
 
-  const API_URL = 'http://localhost:8003/api';
-  const API_URL2 = 'http://localhost:8002/api';
+  // Obtener las URLs desde .env
+  const API_URL = process.env.REACT_APP_API_URL;
+  const API_URL2 = process.env.REACT_APP_API_URL2;
 
   useEffect(() => {
     const fetchEstudiantes = async () => {
@@ -174,6 +175,7 @@ const MatriculasPage = () => {
                         Eliminar
                       </button>
                     </li>
+
                   ))}
                 </ul>
               </div>

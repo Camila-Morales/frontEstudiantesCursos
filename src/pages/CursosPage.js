@@ -13,7 +13,7 @@ const CursosComponent = () => {
   const [estudianteId, setEstudianteId] = useState(null); // Estado para el ID del estudiante al agregar a un curso
   const [cursoId, setCursoId] = useState(null); // Estado para el ID del curso seleccionado al agregar estudiante
 
-  const API_URL = 'http://localhost:8003/api/cursos';
+  const API_URL = process.env.REACT_APP_API_URL + '/cursos';
 
   const listarCursos = async () => {
     try {
